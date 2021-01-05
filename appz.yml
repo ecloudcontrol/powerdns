@@ -1,0 +1,40 @@
+app:
+  name: lowtouch.cloud
+  code: LOWTCHCLD
+  notify: appzdev@cloudbourne.co
+
+build:
+  version: 4.3
+  env: DEV
+  build_file: none
+  output_files: output/*.zip
+  image_template: powerdns-4.3
+  image_name: myco/powerdns
+
+deploy:
+  context: myco/DEV
+  replicas: 1
+  port:
+  - 53
+  - 80
+  - 8081
+
+monitor:
+  notify: appzops@cloudbourne.co      
+
+properties:
+  SALT:
+    vault: SALT
+  PDNSCONF_INCLUDE_DIR: /etc/powerdns/pdns.d
+  PDNSCONF_GMYSQL_DNSSEC: yes
+  PDNSCONF_API_KEY:
+    vault: PDNSCONF_API_KEY
+  SECALLZONES_CRONJOB: no
+  PDNSCONF_GMYSQL_HOST: mysql-5-7
+  PDNSCONF_GMYSQL_DBNAME: powerdns
+  PDNSCONF_GMYSQL_USER: powerdns
+  PDNSCONF_GMYSQL_PASSWORD:
+    vault: PDNSCONF_GMYSQL_PASSWORD
+  PDNSCONF_LAUNCH: gmysql
+  revision : 4
+       
