@@ -1,6 +1,6 @@
 app:
-  name: lowtouch.cloud
-  code: LOWTCHCLD
+  name: lowtouch.cloud DNS
+  code: LTCDNS
   notify: appzdev@cloudbourne.co
 
 build:
