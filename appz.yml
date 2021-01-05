@@ -36,5 +36,5 @@ properties:
   PDNSCONF_GMYSQL_PASSWORD:
     vault: PDNSCONF_GMYSQL_PASSWORD
   PDNSCONF_LAUNCH: gmysql
-  revision : 8
+  revision : 9
        
