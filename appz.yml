@@ -21,8 +21,6 @@ monitor:
   notify: appzops@cloudbourne.co      
 
 properties:
-  SALT:
-    vault: SALT
   PDNSCONF_INCLUDE_DIR: /etc/powerdns/pdns.d
   PDNSCONF_GMYSQL_DNSSEC: yes
   PDNSCONF_API_KEY:
@@ -34,5 +32,7 @@ properties:
   PDNSCONF_GMYSQL_PASSWORD:
     vault: PDNSCONF_GMYSQL_PASSWORD
   PDNSCONF_LAUNCH: gmysql
+  PDNS_DOMAIN: lowtouch.cloud
+  PDNS_AUTO_RESOLVE: yes
   revision : 10
        
