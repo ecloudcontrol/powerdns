@@ -1,5 +1,5 @@
 app:
-  name: lowtouch.cloud DNS
+  name: DNS@lowtouch.cloud
   code: LTCDNS
   notify: appzdev@cloudbourne.co
 
