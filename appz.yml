@@ -16,9 +16,7 @@ deploy:
   replicas: 1
   port:
   - 53
-
-monitor:
-  notify: appzops@cloudbourne.co      
+  - { port : 53, protocol: UDP, name : udp }
 
 properties:
   PDNSCONF_INCLUDE_DIR: /etc/powerdns/pdns.d
