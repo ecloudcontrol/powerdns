@@ -32,5 +32,5 @@ properties:
   PDNSCONF_LAUNCH: gmysql
   PDNS_DOMAIN: lowtouch.cloud
   PDNS_AUTO_RESOLVE: yes
-  revision : 11
+  revision : 12
        
